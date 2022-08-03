@@ -19,4 +19,18 @@
         <p id="date"></p>
     </div>
 </body>
+<body>
+    <div id=""app">
+        <!-- check the data -->
+        <div
+            v-for="todo in todos"
+            :key="todo.title"
+            :style="{ textDecoration: todo.checked? 'line-through':'none'}"
+        >
+            <input type="checkbox" v-model="todo.checked" />
+            {{ todo.title}}
+        </div>
+    </div>
+</body>
 </html>
+<script src="./todo.js"></script>
